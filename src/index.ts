@@ -14,4 +14,4 @@ app.use(cors());
 app.use(routes);
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 
-app.listen(process.env.TYPEORM_PORT || 3333, () => console.log(process.env.TYPEORM_PORT));
+app.listen(5433 || 3333, () => console.log(process.env.TYPEORM_PORT));
