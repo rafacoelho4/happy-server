@@ -8,7 +8,7 @@ export class createUsers1603078232678 implements MigrationInterface {
             columns: [
                 {
                     name: 'id',
-                    type: 'string',
+                    type: 'varchar',
                     isPrimary: true,
                 },
                 {
@@ -19,7 +19,7 @@ export class createUsers1603078232678 implements MigrationInterface {
                 },
                 {
                     name: 'senha',
-                    type: 'string',
+                    type: 'varchar',
                     isNullable: false
                 },
             ]

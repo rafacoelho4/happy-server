@@ -1,8 +1,9 @@
+import 'dotenv/config';
+import path from 'path';
 import express from 'express';
 import cors from 'cors';
 import './database/connection';
 import routes from './routes';
-import path from 'path';
 import 'express-async-errors';
 import errorHandler from './errors/handler';
 
@@ -13,5 +14,4 @@ app.use(cors());
 app.use(routes);
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 
-const PORT = 3333;
-app.listen(PORT, () => console.log(`Escutando na porta ${PORT}`));
+app.listen(process.env.TYPEORM_PORT || 3333, () => console.log(process.env.TYPEORM_PORT));
